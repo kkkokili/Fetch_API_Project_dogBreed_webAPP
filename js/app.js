@@ -2,6 +2,8 @@
 const select = document.getElementById('breeds');
 const card = document.querySelector('.card');
 const form = document.querySelector('form');
+let z=document.createElement('p');
+z.setAttribute("id", "returnWords");
 // .map(breed=> addBreed(breed))
 // ------------------------------------------
 //  FETCH FUNCTIONS
@@ -64,7 +66,8 @@ function postData(e) {
     body: JSON.stringify({name:name,comment:comment})
   })
   .then(response=>response.json())
-  .then(promise=> console.log(promise));
+  .then(()=> document.querySelector('form').appendChild(z))
+  .then(()=> z.innerHTML='Thanks for comment! We have received it!');
 }
 
 // ------------------------------------------

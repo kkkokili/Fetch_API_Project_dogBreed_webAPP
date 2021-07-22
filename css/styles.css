@@ -18,6 +18,11 @@ html {
 body {
   margin: 0; }
 
+#returnWords {
+  text-align: left;
+  padding-top: 2%;
+  color: #FF6767;
+}
 /* HTML5 display definitions
    ========================================================================== */
 /**
